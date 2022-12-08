@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1246,7 +1246,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7bbdcb57bdebf084999a8d255ad1c0d2, type: 2}
     - target: {fileID: 8761909467753133097, guid: dc5a2f48bb50d074da94129464a3ad40, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: laser
       objectReference: {fileID: 0}
     - target: {fileID: 8761909467753133098, guid: dc5a2f48bb50d074da94129464a3ad40, type: 3}
       propertyPath: m_LocalScale.x
