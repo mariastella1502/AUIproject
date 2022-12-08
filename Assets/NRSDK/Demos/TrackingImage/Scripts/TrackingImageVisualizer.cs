@@ -1,70 +1,69 @@
-﻿/****************************************************************************
-* Copyright 2019 Nreal Techonology Limited. All rights reserved.
-*                                                                                                                                                          
-* This file is part of NRSDK.                                                                                                          
-*                                                                                                                                                           
-* https://www.nreal.ai/        
-* 
-*****************************************************************************/
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using NRKernal;
+using UnityEngine.UI;
 
-namespace NRKernal.NRExamples
+public class TrackingImageVisualizer : MonoBehaviour
 {
-    using UnityEngine;
 
-    /// <summary> Uses 4 frame corner objects to visualize an TrackingImage. </summary>
-    public class TrackingImageVisualizer : MonoBehaviour
+    public NRTrackableImage image;
+    public GameObject cube;
+    public Button marsButton, uranusButton;
+    public Image img;
+    private void Update()
     {
-        /// <summary> The TrackingImage to visualize. </summary>
-        public NRTrackableImage Image;
-
-        /// <summary>
-        /// A model for the lower left corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameLowerLeft;
-
-        /// <summary>
-        /// A model for the lower right corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameLowerRight;
-
-        /// <summary>
-        /// A model for the upper left corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameUpperLeft;
-
-        /// <summary>
-        /// A model for the upper right corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameUpperRight;
-
-        /// <summary> The axis. </summary>
-        public GameObject Axis;
-
-        /// <summary> Updates this object. </summary>
-        public void Update()
+        if (image == null)
         {
-            if (Image == null || Image.GetTrackingState() != TrackingState.Tracking)
-            {
-                FrameLowerLeft.SetActive(false);
-                FrameLowerRight.SetActive(false);
-                FrameUpperLeft.SetActive(false);
-                FrameUpperRight.SetActive(false);
-                Axis.SetActive(false);
-                return;
-            }
+            cube.SetActive(false);
+            //marsButton.interactable = false;
+            //uranusButton.interactable = false;
+            return;
+        }
+        var center = image.GetCenterPose();
+        transform.position = center.position;
+        transform.rotation = center.rotation;
+        cube.SetActive(true);
 
-            float halfWidth = Image.ExtentX / 2;
-            float halfHeight = Image.ExtentZ / 2;
-            FrameLowerLeft.transform.localPosition = (halfWidth * Vector3.left) + (halfHeight * Vector3.back);
-            FrameLowerRight.transform.localPosition = (halfWidth * Vector3.right) + (halfHeight * Vector3.back);
-            FrameUpperLeft.transform.localPosition = (halfWidth * Vector3.left) + (halfHeight * Vector3.forward);
-            FrameUpperRight.transform.localPosition = (halfWidth * Vector3.right) + (halfHeight * Vector3.forward);
 
-            var center = Image.GetCenterPose();
-            transform.position = center.position;
-            transform.rotation = center.rotation;
+        /*
+         if(image.GetDataBaseIndex() == 0)
+         {
 
-            FrameLowerLeft.SetActive(true);
-            FrameLowerRight.SetActive(true);
-            FrameUpperLeft.SetActive(true);
-            FrameUpperRight.SetActive(true);
-            Axis.SetActive(true);
+             //attiva bottone gioco marte
+             img = marsButton.GetComponent<Image>();
+             StartFading();
+             marsButton.interactable = true;
+         }
+         else if (image.GetDataBaseIndex() == 1)
+         {
+             //attiva bottone gioco urano
+             img = uranusButton.GetComponent<Image>();
+             StartFading();
+             uranusButton.interactable = true;
+
+         }
+         */
+
+
+        //aggiungere qui il comando che rende un minigioco sbloccabile
+    }
+
+    public void StartFading()
+    {
+        // fades the image out when you click
+        StartCoroutine(FadeImage());
+    }
+
+    IEnumerator FadeImage()
+    {
+
+        // loop over 1 second
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            // set color with i as alpha
+            img.color = new Color(1, 1, 1, i);
+            yield return null;
         }
     }
 }

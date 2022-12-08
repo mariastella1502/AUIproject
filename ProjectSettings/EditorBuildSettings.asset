@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/NRSDK/Demos/HelloMR.unity
     guid: dd74f1c9685ef48499229d4957b58000
+  - enabled: 1
+    path: Assets/Sunny/Scenes/scenaTrattore.unity
+    guid: 2d6e0af2658fc42cea03a85d721365ab
+  - enabled: 1
+    path: Assets/Uranus/Scenes/UranusDefender.unity
+    guid: 55f473d6923deb04b9a36a33edc519ec
   m_configObjects: {}

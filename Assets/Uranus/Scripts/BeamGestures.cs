@@ -7,17 +7,19 @@ using NRKernal;
 
 public class BeamGestures : MonoBehaviour
 {
-    [SerializeField] private GameObject laser;
+    private GameObject laser;
     private bool isOpen;
     private Pose rightHandPose;
     private Pose rightHandPointerPose;
 
-    /*
-    private void Start()
+    
+    private void Awake()
     {
-        StartCoroutine(LaserDeactivator());
+        laser = GameObject.FindGameObjectWithTag("laser");
+
     }
-    */
+    
+    
 
     IEnumerator LaserDeactivator()
     {
