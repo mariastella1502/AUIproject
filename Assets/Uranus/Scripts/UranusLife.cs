@@ -9,6 +9,7 @@ public class UranusLife : MonoBehaviour
     [SerializeField] private int maxHealth = 6;
     [SerializeField] private GameObject explosionPrefab;
 
+
     // Update is called once per frame
     void Update()
     {

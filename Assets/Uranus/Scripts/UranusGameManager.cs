@@ -6,6 +6,17 @@ public class UranusGameManager : MonoBehaviour
 {
     UranusLife uranusLife;
     [SerializeField] private GameObject uranus;
+    [SerializeField] private GameObject winPrefab;
+    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject gameOverPrefab;
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(3);
+        menu.SetActive(true);
+        winPrefab.SetActive(false);
+        gameOverPrefab.SetActive(true);
+    }
 
     private void Awake()
     {
@@ -23,11 +34,12 @@ public class UranusGameManager : MonoBehaviour
     {
         DestroyAsteroids();
         DestroySpawners();
+        IsGameOver();
     }
 
     public void DestroyAsteroids()
     {
-        if (uranusLife.currentHealth == 0)
+        if ((uranusLife.currentHealth == 0) || winPrefab.activeInHierarchy == true)
         {
             var clones = GameObject.FindGameObjectsWithTag("Asteroid");
             for (int i = 0; i < clones.Length; i++)
@@ -41,7 +53,7 @@ public class UranusGameManager : MonoBehaviour
 
     public void DestroySpawners()
     {
-        if (uranusLife.currentHealth == 0)
+        if ((uranusLife.currentHealth == 0) || winPrefab.activeInHierarchy == true)
         {
             var clones = GameObject.FindGameObjectsWithTag("AsteroidSpawner");
             for (int i = 0; i < clones.Length; i++)
@@ -51,6 +63,15 @@ public class UranusGameManager : MonoBehaviour
             }
         }
     }
+
+    public void IsGameOver()
+    {
+        if (uranusLife.currentHealth == 0)
+        {
+            StartCoroutine(GameOver());
+        }
+    }
+
     /*
      * Manca il sistema di punti:
      * 6 Hp= 3 pianeti
