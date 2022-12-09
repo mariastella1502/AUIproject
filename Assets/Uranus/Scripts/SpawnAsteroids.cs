@@ -19,6 +19,12 @@ public class SpawnAsteroids : MonoBehaviour
         StartCoroutine(TimeSpawnDefiner());
                 
     }
+    public void SpawnAgain()
+    {
+        center = transform.position;
+        //Start the coroutine we define below named TimeSpawnDefiner.
+        StartCoroutine(TimeSpawnDefiner());
+    }
 
     IEnumerator TimeSpawnDefiner()
     {

@@ -35,10 +35,10 @@ public class WayPoints : MonoBehaviour
 
     private void Start()
     {
-        wayPoints[0] = new Vector3(5, 0, 10); //attenzione a settare i way points perché se si sovrappongono ad Urano da la null reference exception all'impatto
-        wayPoints[1] = new Vector3(2, 0, 13);
-        wayPoints[2] = new Vector3(-2, 0, 10);
-        wayPoints[3] = new Vector3(-5, 0, 7);
+        wayPoints[0] = new Vector3(3, -1, 2.5f); //attenzione a settare i way points perché se si sovrappongono ad Urano da la null reference exception all'impatto
+        wayPoints[1] = new Vector3(2, -1, 4);
+        wayPoints[2] = new Vector3(-2, -1, 2.5f);
+        wayPoints[3] = new Vector3(-3, -1, 1);
     }
 
     // Update is called once per frame

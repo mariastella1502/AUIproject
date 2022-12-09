@@ -11,6 +11,7 @@ public class BeamGestures : MonoBehaviour
     [SerializeField] private GameObject winPrefab;
     [SerializeField] private GameObject overPrefab;
     [SerializeField] private GameObject pausePrefab;
+    [SerializeField] private GameObject menu;
     private bool isOpen;
     private Pose rightHandPose;
     private Pose rightHandPointerPose;
@@ -44,6 +45,10 @@ public class BeamGestures : MonoBehaviour
         switch (rightHandState.currentGesture)
         {
             case HandGesture.Point:
+                menu.SetActive(true);
+                winPrefab.SetActive(false);
+                pausePrefab.SetActive(true);
+                overPrefab.SetActive(false);
                 break;
             case HandGesture.Grab:
                 //laser.GetComponent<MeshRenderer>().enabled = false;

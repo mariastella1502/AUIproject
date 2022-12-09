@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AsteroidSpawner
+  - Asteroid
+  - Explosion
+  - Uranus
+  - NoiseTarget
+  - laser
+  - Alien
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
@@ -40,4 +48,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: pause
+    uniqueID: 2261095769
+    locked: 0
+  - name: menu
+    uniqueID: 3471513889
     locked: 0
