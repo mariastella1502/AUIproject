@@ -8,6 +8,9 @@ using NRKernal;
 public class BeamGestures : MonoBehaviour
 {
     private GameObject laser;
+    [SerializeField] private GameObject winPrefab;
+    [SerializeField] private GameObject overPrefab;
+    [SerializeField] private GameObject pausePrefab;
     private bool isOpen;
     private Pose rightHandPose;
     private Pose rightHandPointerPose;
@@ -23,7 +26,7 @@ public class BeamGestures : MonoBehaviour
 
     IEnumerator LaserDeactivator()
     {
-        if (!isOpen)
+        if ((!isOpen) && (winPrefab.activeInHierarchy == false && overPrefab.activeInHierarchy == false && pausePrefab.activeInHierarchy == false))
         {
             laser.SetActive(true);
             SoundManagerScript.PlaySound("beam");
