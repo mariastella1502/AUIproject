@@ -18,6 +18,7 @@ public class UranusTimer : MonoBehaviour
     public float tempTime = 0;
     public bool pause = false;
     public bool restart = false;
+    [SerializeField] private GameObject pauseButton;
 
 
     //I want to enable and disenable the "GO!" text at the beginning of the game, after 1 second
@@ -72,6 +73,7 @@ public class UranusTimer : MonoBehaviour
         timeOver.SetActive(false);
         pauseGame.SetActive(false);
         win.SetActive(true);
+        pauseButton.SetActive(false);
     }
 
 
@@ -151,7 +153,7 @@ public class UranusTimer : MonoBehaviour
             tempTime = timeValue;
 
         }
-        else if(timeValue > 9999)
+        else if(timeValue > 9999) //if we have game over panel the time must stop
         {
             timeValue = tempTime;
         }

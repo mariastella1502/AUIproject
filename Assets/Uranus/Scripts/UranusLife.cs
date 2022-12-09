@@ -8,6 +8,8 @@ public class UranusLife : MonoBehaviour
     public int currentHealth = 6;
     [SerializeField] private int maxHealth = 6;
     [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private GameObject pausePrefab;
+    public bool isPause = false;
 
 
     // Update is called once per frame
@@ -24,6 +26,10 @@ public class UranusLife : MonoBehaviour
             Die();
             Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
         }
+
+        if (pausePrefab.activeInHierarchy == true) isPause = true;
+        else isPause = false;
+
     }
 
     void Die()
