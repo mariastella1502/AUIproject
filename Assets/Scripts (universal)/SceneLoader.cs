@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement; //serve per gestire le scene
 public class SceneLoader : MonoBehaviour
 {
 
-    // method che fa il loading della scena successiva
+    //fa il loading della scena successiva
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -16,13 +16,20 @@ public class SceneLoader : MonoBehaviour
 
     }
 
-    public void LoadUranusScene()
+    //dovremo cambiarlo quando aggiungeremo la scena di marte con le quest (stile google maps)
+    public void LoadMarsScene()
     {
         SceneManager.LoadScene(1);
     }
 
+    //method che va al minigioco di Urano
+    public void LoadUranusScene()
+    {
+        SceneManager.LoadScene(2);
+    }
 
-    //method che ritorna dall'ultima scena a quella iniziale
+
+    //method che ritorna alla scena iniziale
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
