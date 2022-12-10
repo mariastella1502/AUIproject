@@ -76,7 +76,7 @@ public class UranusTimer : MonoBehaviour
         pauseButton.SetActive(false);
     }
 
-
+    /*
     //Stop time when in pause, so timeValue keep the last saved value in tempTime
     public void Pause(bool pause)
     {
@@ -87,6 +87,7 @@ public class UranusTimer : MonoBehaviour
         }
 
     }
+    */
     
     void IsGameOver()
     {
@@ -148,9 +149,21 @@ public class UranusTimer : MonoBehaviour
         if (timeValue > 0 && timeValue < 9999) //now I can start decrementing the time remaining checking if I'm in pause or not 
         {
 
+            //Pause(pauseGame.activeInHierarchy);
+            /*
             Pause(pause);
             timeValue -= Time.deltaTime;
             tempTime = timeValue;
+            */
+            if(pauseGame.activeInHierarchy == false)
+            {
+                timeValue -= Time.deltaTime;
+                tempTime = timeValue;
+            }
+            else
+            {
+                timeValue = tempTime;
+            }
 
         }
         else if(timeValue > 9999) //if we have game over panel the time must stop

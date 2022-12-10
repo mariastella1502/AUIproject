@@ -30,6 +30,7 @@ public class UranusGameManager : MonoBehaviour
         winPrefab.SetActive(false);
         gameOverPrefab.SetActive(true);
         pauseButton.SetActive(false);
+        pausePrefab.SetActive(false);
     }
 
     private void Awake()
