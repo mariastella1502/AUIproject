@@ -2443,8 +2443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2cec64dd354cea4492abf1a0944a1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 6
-  maxHealth: 6
+  currentHealth: 8
+  maxHealth: 8
   explosionPrefab: {fileID: 3612006382800648457, guid: 58966a5ba60c9704fb35e0a89a068c56, type: 3}
   pausePrefab: {fileID: 1358552972}
   isPause: 0
