@@ -1809,36 +1809,56 @@ PrefabInstance:
       value: RESTART
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973312945096, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973312945096, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973312945096, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1078068803}
+      objectReference: {fileID: 0}
     - target: {fileID: 5233354973312945096, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadUranusScene
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973312945096, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973312945096, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SceneLoader, Assembly-CSharp
+      value: Timer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973312945096, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973335084546, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973335084546, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973335084546, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1078068803}
+      objectReference: {fileID: 0}
     - target: {fileID: 5233354973335084546, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadUranusScene
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973335084546, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SceneLoader, Assembly-CSharp
+      value: Timer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973335084546, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Spawneralien, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973358282444, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1877,20 +1897,32 @@ PrefabInstance:
       value: QUIT
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973528790743, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973528790743, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973528790743, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1078068803}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973528790743, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5233354973528790743, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadUranusScene
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973528790743, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SceneLoader, Assembly-CSharp
+      value: Timer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233354973528790743, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5233354973541341553, guid: 45c5dc2ed838fc14abdd2605d662b43c, type: 3}
       propertyPath: m_Text
