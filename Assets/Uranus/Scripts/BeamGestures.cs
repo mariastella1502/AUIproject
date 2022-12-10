@@ -15,6 +15,7 @@ public class BeamGestures : MonoBehaviour
     private bool isOpen;
     private Pose rightHandPose;
     private Pose rightHandPointerPose;
+    private bool lockLaser = true;
 
     
     private void Awake()
@@ -22,12 +23,22 @@ public class BeamGestures : MonoBehaviour
         laser = GameObject.FindGameObjectWithTag("laser");
 
     }
-    
+
+    private void Start()
+    {
+        StartCoroutine(WaitForStart());
+    }
+
+    IEnumerator WaitForStart()
+    {
+        yield return new WaitForSeconds(3);
+        lockLaser = false;
+    }
     
 
     IEnumerator LaserDeactivator()
     {
-        if ((!isOpen) && (winPrefab.activeInHierarchy == false && overPrefab.activeInHierarchy == false && pausePrefab.activeInHierarchy == false))
+        if ((!isOpen) && (winPrefab.activeInHierarchy == false && overPrefab.activeInHierarchy == false && pausePrefab.activeInHierarchy == false) && lockLaser ==false)
         {
             laser.SetActive(true);
             SoundManagerScript.PlaySound("beam");
