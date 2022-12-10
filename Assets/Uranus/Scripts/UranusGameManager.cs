@@ -54,7 +54,7 @@ public class UranusGameManager : MonoBehaviour
         DestroyAsteroids();
         DestroySpawners();
         IsGameOver();
-        //IsPause();
+        IsPause(PauseFinish);
     }
 
     public void DestroyAsteroids()
