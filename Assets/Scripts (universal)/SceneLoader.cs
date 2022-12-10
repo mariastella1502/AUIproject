@@ -36,4 +36,12 @@ public class SceneLoader : MonoBehaviour
 
     }
 
+    //method che ricarica la scena stessa
+    public void ResetScene()
+    {
+       
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
+
 }
