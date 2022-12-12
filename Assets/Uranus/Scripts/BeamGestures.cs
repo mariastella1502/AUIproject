@@ -56,10 +56,13 @@ public class BeamGestures : MonoBehaviour
         switch (rightHandState.currentGesture)
         {
             case HandGesture.Point:
-                menu.SetActive(true);
-                winPrefab.SetActive(false);
-                pausePrefab.SetActive(true);
-                overPrefab.SetActive(false);
+                if (lockLaser == false)
+                {
+                    menu.SetActive(true);
+                    winPrefab.SetActive(false);
+                    pausePrefab.SetActive(true);
+                    overPrefab.SetActive(false);
+                }
                 break;
             case HandGesture.Grab:
                 //laser.GetComponent<MeshRenderer>().enabled = false;
