@@ -13,7 +13,7 @@ public class CanvaCameraLoader : MonoBehaviour
     void Start()
     {
         canvas = gameObject.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.renderMode = RenderMode.WorldSpace;
         canvas.worldCamera = Camera.main;
         canvas.planeDistance = 1;
         gameObject.AddComponent<CanvasRaycastTarget>();
