@@ -12,6 +12,7 @@ public class BeamGestures : MonoBehaviour
     [SerializeField] private GameObject overPrefab;
     [SerializeField] private GameObject pausePrefab;
     [SerializeField] private GameObject menu;
+    [SerializeField] private float laserDuration = 3f;
     private bool isOpen;
     private Pose rightHandPose;
     private Pose rightHandPointerPose;
@@ -42,7 +43,7 @@ public class BeamGestures : MonoBehaviour
         {
             laser.SetActive(true);
             SoundManagerScript.PlaySound("beam");
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(laserDuration);
             laser.SetActive(false);
         }
     }
