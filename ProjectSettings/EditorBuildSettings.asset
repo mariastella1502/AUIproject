@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Mars rover/Scenes/SampleScene.unity
     guid: 28412e9f8c1e44fe7bc4750a0ef050d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Uranus/Scenes/UranusDefender.unity
     guid: 55f473d6923deb04b9a36a33edc519ec
   m_configObjects: {}
